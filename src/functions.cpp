@@ -1,4 +1,4 @@
-#include "../include/functions.h"
+#include "../include/functions.hpp"
 #include <iostream>
 
 //fills array with value
