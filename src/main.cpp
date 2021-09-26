@@ -5,17 +5,13 @@
 
 int main()
 {
-	int zahl;
 	std::string inputString;
 
 
-	std::cout << "geben sie eine zahl ein: ";
+	getline(std::cin,inputString);
 
-	std::cin >> inputString;
+	std::cout << "dein string war: " << inputString << std::endl;
 
-	std::cout << "super";
-
-	
 	
 }
 
