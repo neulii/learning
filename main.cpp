@@ -11,7 +11,7 @@ int main()
 	int *test = new int[aS];
 
 	std::string myString = "superstefan";
-
+	//testkommanetar
 
 	
 	fillArray(test,aS,2);
