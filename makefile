@@ -1,14 +1,14 @@
-learning: main.o functions.o
-	g++ main.o functions.o -o learning
+learning: bin/main.o bin/functions.o
+	g++ bin/main.o bin/functions.o -o learning
 
-main.o: main.cpp 
-	g++ main.cpp -c
+bin/main.o: src/main.cpp 
+	g++ src/main.cpp -c -o bin/main.o
 
-functions.o: functions.cpp
-	g++ functions.cpp -c
+bin/functions.o: src/functions.cpp
+	g++ src/functions.cpp -c -o bin/functions.o
 
 clean:
-	rm *.o
+	rm bin/*.o
 	rm learning
 
 run:
