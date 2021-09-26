@@ -5,12 +5,13 @@
 
 int main()
 {
-	std::string inputString;
+	int binaryInteger = 1;
+
+	binaryInteger = binaryInteger << 4;
+	
+	std::cout << binaryInteger << std::endl;
 
 
-	getline(std::cin,inputString);
-
-	std::cout << "dein string war: " << inputString << std::endl;
 
 	
 }
