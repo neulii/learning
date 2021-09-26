@@ -5,15 +5,16 @@
 
 int main()
 {
-	
+	int zahl;
+	std::string inputString;
 
-	int i = 10;
-	int array[20];
 
-	std::string myString = "hallo stefan";
+	std::cout << "geben sie eine zahl ein: ";
 
-	std::cout << sizeof(array) << std::endl;
-	std::cout << sizeof(int) << std::endl;
+	std::cin >> inputString;
+
+	std::cout << "super";
+
 	
 	
 }

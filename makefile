@@ -11,6 +11,6 @@ clean:
 	rm bin/*.o
 	rm learning
 
-run:
+run: learning
 
 	./learning
