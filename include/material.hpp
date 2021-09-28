@@ -6,10 +6,15 @@
 
 class Material
 {
+	private:
+
+		std::string materialName;
 
 	public:
 		Material(std::string materialName);
-
+	
+		void printToConsole();
+		void changeMaterialName(std::string newName);
 
 };
 

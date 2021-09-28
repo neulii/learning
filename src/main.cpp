@@ -2,6 +2,7 @@
 #include "../include/functions.hpp"
 
 #include <fstream>
+#include "../include/material.hpp"
 
 int main()
 {
@@ -37,7 +38,11 @@ int main()
 
 	}
 
-	
+	Material hammer("hammer");
+	hammer.printToConsole();
+	hammer.changeMaterialName("superhammer");
+	hammer.printToConsole();
+
 }
 
 
