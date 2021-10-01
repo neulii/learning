@@ -1,48 +1,29 @@
 #include <iostream>
 #include "../include/functions.hpp"
-
-#include <fstream>
 #include "../include/material.hpp"
+
+
+
+
 
 int main()
 {
-	using namespace std;
+	
+
+	int i = 10;
+	int array[20];
+
+	std::string myString = "hallo stefan";
+
+	std::cout << sizeof(array) << std::endl;
+	std::cout << sizeof(int) << std::endl;
 
 	
-	std::ofstream file;
+	Material* eisen = new Material("eisen",45);
+	eisen->printToConsole();
 
-	file.open("file.txt",std::ios::app);
-	/*
-	file << "hallo" << std::endl;
-	file << "nur ein test" << std::endl;
 
-	file.close();
-	*/
-
-	std::ifstream readFile;
-
-	readFile.open("file.txt");
 	
-	if(readFile.is_open())
-	{
-		string line;
-		string fileText;
-
-		while(getline(readFile, line))
-		{
-			fileText = fileText + line + '\n';
-
-		}
-
-			cout << fileText << endl;
-
-	}
-
-	Material hammer("hammer");
-	hammer.printToConsole();
-	hammer.changeMaterialName("superhammer");
-	hammer.printToConsole();
-
 }
 
 
