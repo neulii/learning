@@ -1,5 +1,5 @@
 learning: bin/main.o bin/functions.o bin/material.o
-	g++ bin/main.o bin/functions.o bin/material.o -o learning
+	g++ bin/main.o bin/functions.o bin/material.o -o learning -lncurses
 
 bin/main.o: src/main.cpp 
 	g++ src/main.cpp -c -o bin/main.o

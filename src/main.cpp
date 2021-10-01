@@ -1,27 +1,29 @@
 #include <iostream>
 #include "../include/functions.hpp"
 #include "../include/material.hpp"
+#include <curses.h>
 
 
 
+using std::cout;
+using std::endl;
 
 
 int main()
 {
 	
+	initscr();
+	start_color();
 
-	int i = 10;
-	int array[20];
+init_pair(1, COLOR_GREEN, COLOR_RED); 
+  color_set(1, 0);
+printw("Hello World !!!");
+mvprintw(20,20,"super");
+init_pair(1, COLOR_RED, COLOR_BLACK);
 
-	std::string myString = "hallo stefan";
-
-	std::cout << sizeof(array) << std::endl;
-	std::cout << sizeof(int) << std::endl;
-
-	
-	Material* eisen = new Material("eisen",45);
-	eisen->printToConsole();
-
+refresh();
+getch();
+endwin();
 
 	
 }
