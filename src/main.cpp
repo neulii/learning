@@ -1,7 +1,7 @@
 #include <iostream>
 #include "../include/functions.hpp"
 #include "../include/material.hpp"
-#include <curses.h>
+#include <ncurses.h>
 
 
 
@@ -11,18 +11,42 @@ using std::endl;
 
 int main()
 {
-	
-	initscr();
-	start_color();
+	bool exit = false;
+	int ch;
 
-init_pair(1, COLOR_GREEN, COLOR_RED); 
-  color_set(1, 0);
-printw("Hello World !!!");
-mvprintw(20,20,"super");
-init_pair(1, COLOR_RED, COLOR_BLACK);
+	initscr();
+	raw();
+	keypad(stdscr, TRUE);
+	noecho();
+	do
+	{
+		printw("Type any character to see it in bold\n");
+		ch = getch();
+
+		if(ch == KEY_F(1)){
+			exit = true;
+
+			printw("F1 Key Pressed");
+		}
+		else
+		{
+			printw("the pressed key is ");
+			attron(A_BOLD);
+			printw("%c", ch);
+			attroff(A_BOLD);
+
+		}
+
+	} while (!exit);
+	
+	
+
+
+
+
 
 refresh();
-getch();
+//getch();
 endwin();
 
 	
