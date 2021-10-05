@@ -1,6 +1,6 @@
 *.o
 *.out
 learning
-*.txt
+file.txt
 /build
 .vscode/c_cpp_properties.json
