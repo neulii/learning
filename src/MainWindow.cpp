@@ -28,7 +28,7 @@ void MainWindow::OnPaint(wxPaintEvent & event)
 
   dc.DrawRectangle(20, 20, 50, 50);
   dc.DrawRectangle(30, 40, 50, 50);
-
+/*
   dc.SetBrush(wxBrush(white));
   dc.DrawRectangle(100, 20, 50, 50);
   dc.DrawRectangle(110, 40, 50, 50); 
@@ -88,4 +88,5 @@ void MainWindow::OnPaint(wxPaintEvent & event)
   dc.SetBrush(wxBrush(blue));
   dc.DrawRectangle(rect5);
   dc.DestroyClippingRegion(); 
+  */
 }

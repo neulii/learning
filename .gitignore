@@ -4,3 +4,5 @@ learning
 file.txt
 /build
 .vscode/c_cpp_properties.json
+/.vs
+/out/build/x64-Debug
