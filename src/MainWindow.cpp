@@ -23,23 +23,43 @@ MainWindow::MainWindow(const wxString& title)
 void MainWindow::clickedOnMyButton(wxCommandEvent& event)
 {
     wxLogDebug("clicked");
- 
+/* 
     //myPanel->SetBackgroundColour(*wxRED);
     wxClientDC dc(myPanel);
     wxPen pen(*wxGREEN, 4);
     dc.SetPen(pen);
 
     dc.DrawLine(0,0,100,100);
-
+*/
 
     //Refresh();
    // Close();
 
 }
 
+void MainWindow::OnPaint(wxPaintEvent& event)
+{
+	wxLogDebug("testonpaint");
+
+
+    wxPaintDC dc(this);
+    wxPen pen(*wxGREEN, 4);
+    dc.SetPen(pen);
+
+    dc.DrawLine(0,0,100,100);
+
+
+
+
+
+}
+
+
+
+
 void MainWindow::onMotion(wxMouseEvent& event)
 {
-
+/*
     if (event.Dragging())
     {
         wxClientDC dc(myPanel);
@@ -48,7 +68,7 @@ void MainWindow::onMotion(wxMouseEvent& event)
         dc.DrawPoint(event.GetPosition());
         dc.SetPen(wxNullPen);
     }
-
+*/
 
     wxString xPosString;
     wxString yPosString;
@@ -76,6 +96,7 @@ void MainWindow::render(wxTimerEvent& event)
 BEGIN_EVENT_TABLE(MainWindow,wxFrame)
     EVT_BUTTON(MY_BUTTON_ID, MainWindow::clickedOnMyButton)
     EVT_TIMER(RENDER_TIMER_ID,MainWindow::render)
+	EVT_PAINT(MainWindow::OnPaint)
 END_EVENT_TABLE()
 
 

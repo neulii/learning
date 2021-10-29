@@ -15,6 +15,7 @@ class MainWindow : public wxFrame
     void clickedOnMyButton(wxCommandEvent& event);
     void onMotion(wxMouseEvent& event);
     void render(wxTimerEvent& event);
+	void OnPaint(wxPaintEvent& event);
 
     DECLARE_EVENT_TABLE()
 };
