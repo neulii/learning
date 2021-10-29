@@ -40,7 +40,6 @@ void MainWindow::clickedOnMyButton(wxCommandEvent& event)
 void MainWindow::onMotion(wxMouseEvent& event)
 {
 
-    wxLogDebug("motion erkannt");
     if (event.Dragging())
     {
         wxClientDC dc(myPanel);
@@ -49,6 +48,19 @@ void MainWindow::onMotion(wxMouseEvent& event)
         dc.DrawPoint(event.GetPosition());
         dc.SetPen(wxNullPen);
     }
+
+
+    wxString xPosString;
+    wxString yPosString;
+
+    xPosString << event.GetX();
+    yPosString << event.GetY();
+
+
+    wxString postionString = _("x: ")+ _(xPosString)+ _("y: " ) + _(yPosString);
+
+    wxLogDebug(postionString);
+
 }
 
 void MainWindow::render(wxTimerEvent& event)
@@ -57,7 +69,7 @@ void MainWindow::render(wxTimerEvent& event)
     wxString eventsString;
     eventsString << poppedEventsFromTimer;
 
-    wxLogDebug(eventsString);
+   // wxLogDebug(eventsString);
 }
 
 
